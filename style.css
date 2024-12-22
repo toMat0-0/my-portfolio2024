@@ -220,11 +220,18 @@ header h1, header p {
     text-align: center;
 }
 
-.research-content p {
-    font-size: 1.4rem;
+#research p {
+    font-size: 1.4rem; /* Increase paragraph font size for better visibility */
+    line-height: 1.8; /* Add spacing for better readability */
     text-align: center;
     margin-bottom: 2rem;
 }
+
+#research h5 {
+    font-size: 2rem; /* Make subheadings more prominent */
+    margin-bottom: 1rem;
+}
+
 
 #more-about-me {
     /*height: calc(50vw * (917 / 917));*/
