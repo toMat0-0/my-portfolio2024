@@ -5,7 +5,6 @@ Welcome to my personal project portfolio.
 | | Link |
 |---|---|
 | **Live site (GitHub Pages)** | **https://toMat0-0.github.io/my-portfolio2024/** |
-| **Repository (code)** | https://github.com/toMat0-0/my-portfolio2024 |
 
 ---
 
