@@ -1,0 +1,316 @@
+
+body {
+    font-family: 'Arsenal SC', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('image/page.png') center/cover no-repeat;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+    margin-bottom: 6rem; /* Added space below the header */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+header h1, header p {
+    z-index: 1;
+}
+
+/* Typing Animation */
+#typing-text {
+    font-size: 5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #a8f38b;
+    display: inline-block;
+    animation: typing 7s steps(40, end) infinite, blink 1s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #bed0f7;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 2rem; /* More space around about section */
+    margin-bottom: 4rem; /* Add space below About Me */
+}
+
+.introduction h2 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.introduction p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Art Gallery Section */
+#art {
+    padding: 6rem 2rem;
+    background-color: #fff;
+    text-align: left;
+    margin-top: 6rem; /* Add space above Art Gallery */
+}
+
+#art-intro {
+    padding: 2rem 0;
+    background-color: #f8f9fa; /* Optional: Light background */
+    font-size: 1.2rem;
+    color: #555; /* Optional: Neutral text color */
+    text-align: center;
+}
+
+#art h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#art .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to the next line */
+    gap: 20px; /* Add spacing between items */
+}
+
+#art .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* Each item takes up 50% of the width minus the gap */
+    max-width: calc(50% - 20px); /* Ensure items don't exceed 50% of the width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.gallery-item {
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.gallery-text {
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    padding: 1.5rem;
+    font-size: 1.4rem; /* Adjust font size for better readability */
+    color: #333; /* Darker font color for contrast */
+    height: 100%; /* Ensure it stretches to match other gallery items */
+    text-align: center; /* Center-align the text */
+    margin: 10px; /* Add some space between the text block and the gallery borders */
+}
+
+/* Recent Projects Section */
+#recent-projects {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#recent-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#recent-projects p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* Experience Section */
+#education {
+    padding: 6rem 2rem;
+    min-height: 70vh;
+    background-color: #fff;
+}
+
+#education h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#education h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+#education p {
+    font-size: 1.2rem;
+}
+
+/* Research Section */
+#research {
+    padding: 6rem 2rem;
+    background-color: #f1f1f1;
+    min-height: 60vh;
+}
+
+#research h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.research-content p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#more-about-me {
+    /*height: calc(50vw * (917 / 917));*/
+    padding: 6rem 2rem;
+    text-align: left;
+    background: url('image/pudding.JPG') center/cover no-repeat;
+    color: #fff; /* Set font color to white */
+}
+
+#more-about-me h2, #more-about-me p {
+    color: #fff; /* Ensure the text stands out on the background */
+}
+
+#more-about-me p {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+
+#more-about-me .button {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    background-color: #bed0f7;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#more-about-me .button:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #a8c1f7; /* Set your desired color (green in this case) */
+    border: none; /* Remove borders if desired */
+    color: white; /* Text color */
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Change the left and right arrow colors */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* arrow background */
+  background-image: none;  /* remove default white chevron */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Adjust the shape and angle of the arrow tips */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%) rotate(-135deg); /* ← default for left */
+}
+
+/* Right arrow customization */
+.carousel-control-next-icon::before {
+  transform: translate(-40%, -50%) rotate(40deg); /* → default for right */
+}
+
