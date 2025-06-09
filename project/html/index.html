@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yidan Chen &mdash; ML with sounds</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link href="fonts/icomoon/style.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="fonts/flaticon/font/flaticon.css" rel="stylesheet">
+
+
+    <link href="css/aos.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="site-wrap">
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+    <div class="container">
+
+        <div class="row no-gutters site-navbar align-items-center py-3">
+
+            <div class="col-6 col-lg-2 site-logo">
+                <a href="index.html">Yidan Chen</a>
+            </div>
+            <div class="col-6 col-lg-10 text-right menu">
+                <nav class="site-navigation text-right text-md-right">
+
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li class="active">
+                            <a href="index.html">Main</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="datasets.html">Datasets</a>
+                            <ul class="dropdown arrow-top">
+                                <li><a href="dogdataDetail.html">dog barking data</a></li>
+                                <li><a href="catdataDetail.html">cat meowing data</a></li>
+                                <li class="has-children">
+                                    <a href="#">FFT data files</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">DOG</a></li>
+                                        <li><a href="#">CAT</a></li>
+                                        <li><a href="#">code</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://tomat0-0.github.io/my-portfolio2024/">Back to Profolio</a></li>
+                    </ul>
+
+                    <a class="site-menu-toggle js-menu-toggle text-black d-inline-block d-lg-none" href="#"><span
+                            class="icon-menu h3"></span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="site-hero">
+            <div class="container">
+                <div class="bg-img" style="background-image: url('images/hero_2.jpg');">
+                    <blockquote>
+                        <p>Can we Hear how Dog Feels?</p>
+                        <div class="author">
+                            <cite> </cite>
+                        </div>
+                    </blockquote>
+
+                    <div class="cta-box">
+                        <h2>This is Marley!</h2>
+                        <p>
+                            He’s a very sweet and playful one-year-old golden retriever — my roommate, shadow, and
+                            part-time shoe thief.</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END site-hero -->
+
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a class="service">
+                            <h3>Can we use machine learning to understand what dogs are trying to say?</h3>
+                            <p>Living with Marley, my golden retriever roommate, is a daily reminder that dogs have rich
+                                emotional lives—they just express them differently than we do.
+                                Sometimes, when we’re about to go for a walk, he spins in circles and lets out excited
+                                barks. Other times, when he sees me after I’ve been away, he stretches with a big yawn
+                                and emits a low growl-like moan that sounds like relief. These moments got me thinking:
+
+                                </li>Can we use machine learning to understand what dogs are trying to say?</li>
+
+                                That curiosity sparked this project. I wanted to see if I could build a system to
+                                classify dog sounds—especially barking and other vocalizations—into emotional
+                                categories.
+                                The motivation goes beyond academic interest: when I leave the house, Marley is alone.
+                                If I could detect his emotional state through sound, I might be able to better respond
+                                to his needs—even from afar. </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="site-section">
+                    <div class="container">
+
+                        <div class="half d-md-flex d-block align-items-stretch">
+
+                            <a class="img" style="
+  background-image: url('images/work_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  height: 300px;">
+                            </a>
+
+                            <div class="half-content align-self-center">
+                                <h3>Where Does Barking Data Even Come From?</h3>
+                                <p>The first question I ran into was simple but critical:
+                                    Where do I get my data?
+
+                                    I started by trying to record Marley’s barks in different emotional states. But I
+                                    hit a surprising obstacle — <strong>golden retrievers just don’t bark much
+                                        :<</strong>. Marley’s a good
+                                    boy; unless he’s excited about a walk, he’s mostly quiet.
+
+                                    After several days of patient observation (and some sneaky recording), I ended up
+                                    with only a few usable clips — not nearly enough to train a model. So, I turned to
+                                    small open-source dog bark datasets to fill the gap.</p>
+                                <a class="btn btn-outline-primary" href="dogdataDetail.html">View Dataset</a>
+                            </div>
+                        </div>
+
+                        <div class="half d-md-flex align-items-stretch">
+
+                            <a class="img order-md-2" href="dogdataDetail.html"
+                               style="background-image: url('images/pca_pair.png')">
+
+                            </a>
+                            <div class="half-content align-self-center">
+                                <h3>Building the Model</h3>
+                                <p>Once the data was processed and features were extracted, the next step was to train a
+                                    machine learning model to classify the emotional tone behind each dog sound.</p>
+                                <p>
+                                    <strong> Input:</strong>
+                                <p>A vector of frequency-domain features (e.g. <code>spec_0, spec_1,
+                                    ..., spec_n</code>)</p>
+                                <p>
+                                    Corresponding emotion labels (e.g. <code>aggressive, deffensive, normal</code>)</p>
+
+                                <br>
+                                <strong>Explore Models:</strong>
+                                </p>
+                                <a class="btn btn-outline-primary" href="dogdataDetail.html#model">View Models</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> <!-- END .site-section -->
+
+                <div class="half-content align-self-center mt-5">
+                    <h3>From Linear to Non-Linear, Dogs to Cats</h3>
+                    <p>In short, I wanted to find the best way to classify the emotional tone in dog barking. I
+                        started with simple, interpretable models: <strong>Principal Component Analysis
+                            (PCA)</strong> for
+                        dimensionality reduction, followed by <strong>Linear Discriminant Analysis (LDA)</strong>
+                        and <strong>logistic
+                            regression</strong>.</p>
+
+                    <p>These models were easy to work with, but their performance was poor — mainly because they
+                        rely on assumptions (like equal class variance) that didn’t hold in my data.</p>
+
+                    <p>To improve accuracy, I combined <strong>PCA + LDA</strong> and simplified the task into a
+                        binary
+                        classification problem: normal vs. abnormal emotion. This approach performed much better
+                        (around 70% accuracy), but something felt off — by reducing emotion into just two
+                        classes, I lost the nuance I cared about.</p>
+
+                    <p>That led to a bit of soul-searching. With high-dimensional features and a very small
+                        dataset, I realized I might be hitting the limits of what was possible here. So, I pivoted —
+                        and turned to a larger dataset of cat vocalizations (~400 samples) to explore new models and
+                        get more robust results.</p>
+
+                    </p>
+                </div>
+
+                <div class="half d-md-flex align-items-stretch">
+                    <div class="img" style="
+    background-image: url('images/catsound.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    flex: 1;">
+                    </div>
+
+                    <div class="half-content align-self-center">
+                        <h3>What is more in a larger datasets?</h3>
+                        <p>Can we get better results based on the same path, in a larger dataset with more precise
+                            labeling?</p>
+                        <a class="btn btn-outline-primary" href="catdataDetail.html">View Dataset</a>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-5">
+                    <h3>From Breed to Emotion: Modeling Meows</h3>
+
+                    <p>After experimenting with dog barks, I shifted focus to a larger and more structured dataset
+                        of cat
+                        vocalizations. The additional data gave me a chance to test whether more examples — and a
+                        bit more
+                        biological consistency — could help the models do better.</p>
+
+                    <p>I started with breed classification as a sanity check. The results were promising: PCA +
+                        logistic
+                        regression and LDA both achieved over 94% accuracy. That success gave me confidence to move
+                        on to
+                        the harder question — emotion.</p>
+
+                    <p>I applied the same PCA + LDA pipeline to classify meows by emotional context (brushing,
+                        feeding,
+                        isolation). Accuracy improved compared to the dog dataset, but not dramatically — still
+                        around
+                        64–65%. Random Forests showed slightly different patterns, but no major gains.</p>
+
+                    <p>One takeaway? Some emotional states, like isolation, might have more distinct acoustic cues.
+                        Others —
+                        especially those involving human interaction — are harder to tell apart. Maybe emotion isn’t
+                        just in
+                        the sound, but in the context, tone, timing, or body language we’re not capturing here.</p>
+                </div>
+
+
+                <div class="half-content align-self-center mt-5">
+                    <h3>What I will do in the Future</h3>
+                    <p>While the current models offered some insights, there’s significant room to grow
+                        — both technically and conceptually. Looking ahead, several directions could meaningfully
+                        improve performance and interpretability:</p>
+
+                    <ul>
+                        <li><strong>Grow the dataset</strong> — More labeled examples, especially with better emotional
+                            annotations, would give the models more to learn from and test against.
+                        </li>
+                        <li><strong>Look at sound over time</strong> — Right now, I’m using static features. But emotion
+                            often lives in how things change — maybe capturing those dynamics could help.
+                        </li>
+                        <li><strong>Try deeper models</strong> — Tools like CNNs might be able to find patterns that
+                            hand-crafted features miss, especially if I can feed them more raw or lightly processed
+                            audio.
+                        </li>
+                        <li><strong>Go beyond sound</strong> — Maybe a bark or a meow isn’t enough on its own. If we
+                            included video, body language, or even environmental cues, emotion recognition could get a
+                            lot more accurate (and a lot more human-like).
+                        </li>
+                    </ul>
+
+                    <p>This isn’t the end — just the end of the first chapter. And I’m looking forward to what comes
+                        next.</p>
+
+
+                </div>
+            </div> <!-- END .site-section -->
+
+    </main>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row footer-inner">
+                <div class="col-lg-3">
+                    <div class="widget mb-4">
+                        <h3>(・∀・(・∀・(・∀・*)</h3>
+                        <p>All you need is a golden retriever.<a href="contact.html"> More Marley</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-2 pl-4 ml-auto">
+                    <div class="widget mb-4">
+                        <h3>Navigation</h3>
+                        <ul class="list-unstyled links">
+                            <li><a href="#">Main</a></li>
+                            <li><a href="datasets.html.">Datasets</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">back to profolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget mb-4">
+                        <h3>Social</h3>
+                        <ul class="list-unstyled social">
+                            <li><a href="https://www.linkedin.com/in/yidan-chen-1dc/"><span
+                                    class="mr-2 icon-linkedin"></span> Linkedin</a></li>
+                            <li><a href="https://github.com/toMat0-0/my-portfolio2024"><span
+                                    class="mr-2 icon-play"></span> GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-5 text-center copyright">
+                    <p>
+                        Yidan Chen
+                        <script>document.write(new Date().getFullYear());</script>
+                        | <a href="https://github.com/toMat0-0/my-portfolio2024" target="_blank"
+                             title="Yidan project">Porfolio</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/aos.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

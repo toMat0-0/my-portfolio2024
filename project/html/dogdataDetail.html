@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yidan Chen &mdash; Dog-Datasets</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link href="fonts/icomoon/style.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="fonts/flaticon/font/flaticon.css" rel="stylesheet">
+
+
+    <link href="css/aos.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="site-wrap">
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+    <div class="container">
+
+        <div class="row no-gutters site-navbar align-items-center py-3">
+
+            <div class="col-6 col-lg-2 site-logo">
+                <a href="index.html">Yidan Chen</a>
+            </div>
+            <div class="col-6 col-lg-10 text-right menu">
+                <nav class="site-navigation text-right text-md-right">
+
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li class="active">
+                            <a href="index.html">Main</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="datasets.html">Datasets</a>
+                            <ul class="dropdown arrow-top">
+                                <li><a href="dogdataDetail.html">dog barking data</a></li>
+                                <li><a href="catdataDetail.html">cat meowing data</a></li>
+                                <li class="has-children">
+                                    <a href="datasets.html">FFT data files</a>
+                                    <ul class="dropdown">
+                                        <li><a download="dog_sound_dataset.sip" href="#">DOG</a></li>
+                                        <li><a href="#">CAT</a></li>
+                                        <li><a href="#">code</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://tomat0-0.github.io/my-portfolio2024/">Back to Profolio</a></li>
+                    </ul>
+
+                    <a class="site-menu-toggle js-menu-toggle text-black d-inline-block d-lg-none" href="#"><span
+                            class="icon-menu h3"></span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+
+        <div class="heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1>Dog-Dataset</h1>
+                        <p>A small open-source dataset was used, consisting of:
+
+                            45 dog barks
+
+                            26 grunts
+
+                            23 growls
+                            Each sample is a .wav file, with varying durations and vocal characteristics.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END page-heading -->
+
+        <div class="site-section">
+            <div class="container">
+
+                <div class="half d-md-flex d-block align-items-stretch">
+
+                    <div class="img" style="
+  background-image: url('images/all_spec.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 400px;">
+                    </div>
+
+
+                    <div class="half-content align-self-center">
+                        <h3>Data Processing</h3>
+                        <p>The data was split into 80% training and 20% testing sets to evaluate model performance.</p>
+                        <p>
+                            <strong>Listen to a sample:</strong>
+                            <audio controls>
+                                <source src="audio/sample_bark.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="half d-md-flex align-items-stretch">
+                    <!-- Block 1 -->
+                    <div class="half-content align-self-start pr-md-5 pl-md-4" style="flex: 1;">
+                        <h3>1. Labeling and Categorization</h3>
+                        <p>While the original labels told us what type of sound it was, they didn’t tell us how the dog
+                            was feeling. To make the data more emotionally informative, I added additional tags to
+                            reflect the emotional context — for example, whether a bark sounded aggressive, defensive,
+                            or playful.</p>
+                        <p><strong>Note:</strong> These emotion labels were added manually, which introduces some
+                            subjectivity and potential bias.</p>
+                        <a class="btn btn-outline-primary" download href="files/dog_sound_dataset.zip">Download
+                            Files</a>
+                    </div>
+
+                    <!-- Block 2 -->
+                    <div class="half-content align-self-start pl-md-5 pr-md-4" style="flex: 1;">
+                        <h3>2. Frequency Analysis</h3>
+                        <p>We applied a Fast Fourier Transform (FFT) to each audio clip using Python libraries like
+                            <code>librosa</code> and <code>numpy</code>. This technique decomposes the sound wave into
+                            its component frequencies and produces a spectrum showing how much energy is present at each
+                            frequency.</p>
+                        <p><strong>Download:</strong> Python script for sound-to-frequency conversion</p>
+                        <a class="btn btn-outline-primary" download href="files/sound_to_frequency.py">Download Code</a>
+
+                    </div>
+                </div>
+
+                <!-- Visual Example: CSV Snapshot -->
+                <div class="half d-md-flex align-items-stretch mt-5">
+                    <!-- Image Block -->
+                    <div class="img"
+                         style="background-image: url('images/csv_example.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 300px; flex: 1;">
+                    </div>
+
+                    <!-- Text Block -->
+                    <div class="half-content align-self-center pl-md-5 pr-md-4" style="flex: 1;">
+                        <h3>3. From Sound to Structured Data</h3>
+                        <p>This snapshot shows how raw `.wav` files are transformed into structured data. Each sound
+                            clip is converted into frequency-domain features using FFT. Columns like <code>spec_0</code>
+                            to <code>spec_1024</code> represent amplitudes at specific frequency bins.</p>
+                        <p><strong>Download:</strong> A sample feature-extracted CSV file</p>
+                        <a class="btn btn-outline-primary" download href="files/all_spectrum_features.csv">Download
+                            CSV</a>
+                    </div>
+                </div>
+
+                <div class="py-5" id="model">
+                    <div class="half-content align-self-center">
+                        <h3> Model Overview</h3>
+                        <!-- your model content -->
+                        <p>The goal of this modeling phase was to explore whether machine learning models could
+                            accurately
+                            classify dog vocalizations into emotional categories, using features extracted from
+                            frequency
+                            analysis.</p>
+                    </div>
+
+                    <div class="half-content align-self-center">
+                        <h3>1. Models Applied</h3>
+                        <p>I began with classical, interpretable models:</p>
+                        <ul>
+                            <li><strong>PCA (Principal Component Analysis):</strong> Used for dimensionality reduction
+                                to
+                                visualize and reduce noise from high-dimensional FFT features.
+                            </li>
+                            <li><strong>LDA (Linear Discriminant Analysis)</strong> and <strong>Logistic
+                                Regression:</strong> Applied to classify emotional labels based on transformed features.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="half d-md-flex align-items-stretch mt-5">
+
+                        <!-- Interactive PCA Plot -->
+                        <!-- LEFT side: Plot -->
+                        <div class="half-content align-self-center pr-md-4" style="flex: 1;">
+                            <iframe frameborder="0" height="400" src="pca_3d.html" style="border: none;"
+                                    width="100%"></iframe>
+                            <p class="text-center small text-muted">Interactive 3D PCA Plot</p>
+                        </div>
+
+                        <!-- RIGHT side: Text -->
+                        <div class="half-content align-self-center pl-md-4" style="flex: 1;">
+                            <h3>1. PCA Visualization</h3>
+                            <p>From the 3D PCA plot on the left, we can see that there’s no clear clustering or
+                                visible trend among the points representing different emotional scores. According to
+                                the PCA summary from R, the first three principal components already explain over
+                                90% of the total variance — so we’re not missing much by visualizing just these
+                                three. However, despite this high variance capture, the emotional categories remain
+                                heavily overlapped, suggesting that PCA alone <strong>doesn’t effectively
+                                    separate</strong> the
+                                classes. This also explains why models using only PCA features showed poor
+                                classification accuracy.</p>
+                        </div>
+
+
+                    </div>
+                    <p><strong>Note:</strong>The first 5 principal components explain 93% of the variance,
+                        and the first 10 explain 98% . However,
+                        even with these components, classification performance remains limited: the best model using
+                        PCA features achieved only 61% accuracy, regardless of whether 5 or 10 components were used.
+                    </p>
+
+
+                    <div class="half d-md-flex align-items-stretch mt-5">
+                        <div class="half-content align-self-center pr-md-5 pl-md-4">
+                            <h3>2. LDA Visualization</h3>
+                            <p>From the LDA projection on the right, we see a strong separation between emotional states
+                                — but it’s misleading. In practice, LDA only achieved 46% accuracy, even lower than
+                                PCA-based logistic regression (61%).</p>
+                        </div>
+                        <div class="img"
+                             style="background-image: url('images/lda(raw).png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 300px;"></div>
+                    </div>
+
+
+                    <p><strong>Note:</strong> This poor performance likely stems from LDA's assumptions being violated:
+                        the input
+                        features were skewed and the variances within classes differed significantly — both
+                        of which undermine LDA's effectiveness. So while the projection looks promising, it
+                        doesn’t hold up when applied to unseen data.</p>
+
+                    <!-- Binary Classification -->
+                    <div class="half d-md-flex align-items-stretch">
+                        <!-- Block 1 -->
+                        <div class="half-content align-self-start pr-md-5 pl-md-4" style="flex: 1;">
+                            <h3>3. Binary Classification Strategy</h3>
+                            <p>What if I don't even have three clear emotional categories in the dataset to begin with?
+                                To simplify the task, I reframed it as a binary classification problem:</p>
+                            <ul>
+                                <li><strong>Normal:</strong> neutral or calm vocalizations</li>
+                                <li><strong>Abnormal:</strong> emotionally charged sounds (e.g., aggressive or defensive
+                                    vocalizations)
+                                </li>
+                            </ul>
+                            <p>Using a combination of <strong>PCA + LDA</strong> on this binary setup
+                                yielded around <strong>69%</strong>
+                                test accuracy.</p>
+                            <p><strong>Note:</strong> This approach comes with trade-offs. Emotional nuance is lost —
+                                diverse vocal cues get flattened into just two buckets.</p>
+                        </div>
+
+                        <!-- Block 2 -->
+                        <div class="half-content align-self-start pl-md-5 pr-md-4" style="flex: 1;">
+                            <h3>4. Reflection and Improvement</h3>
+                            <p>By this stage, a few key limitations had become clear:</p>
+                            <ul>
+                                <li><strong>1.</strong> The dataset has high dimensionality but a very small sample size
+                                </li>
+                                <li><strong>2. </strong> The current linear modeling approach may not fully capture the
+                                    characteristics of complex sound patterns
+                                </li>
+                            </ul>
+                            <p>These challenges pointed to opportunities for future improvement — from expanding the
+                                dataset to trying more advanced or nonlinear models.</p>
+                            <p><strong>what happened next?</strong></p><a class="btn btn-outline-primary"
+                                                                          href="index.html">Back to the main
+                        </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Model Performance Chart -->
+                    <div class="half d-md-flex align-items-stretch mt-5">
+                        <!-- Left side: Chart image -->
+                        <div class="img"
+                             style="background-image: url('images/dogmodel.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 300px; flex: 1;">
+                        </div>
+
+                        <!-- Right side: Caption and explanation -->
+                        <div class="half-content align-self-center pl-md-5 pr-md-4" style="flex: 1;">
+                            <h3>Model Performance Summary</h3>
+                            <p>This chart compares the performance of several models tested on the dog sound data. You
+                                can see that PCA + logistic regression gave moderate results, while LDA underperformed
+                                due to assumption violations. Binary classification improved performance slightly, but
+                                still struggled with generalization.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/jquery-ui.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.stellar.min.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/aos.js"></script>
+
+            <script src="js/main.js"></script>
+
+</body>
+</html>

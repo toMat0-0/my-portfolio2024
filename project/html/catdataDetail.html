@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yidan Chen &mdash; Cat-Datasets</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link href="fonts/icomoon/style.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="fonts/flaticon/font/flaticon.css" rel="stylesheet">
+
+
+    <link href="css/aos.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="site-wrap">
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+    <div class="container">
+
+        <div class="row no-gutters site-navbar align-items-center py-3">
+
+            <div class="col-6 col-lg-2 site-logo">
+                <a href="index.html">Yidan Chen</a>
+            </div>
+            <div class="col-6 col-lg-10 text-right menu">
+                <nav class="site-navigation text-right text-md-right">
+
+                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                        <li class="active">
+                            <a href="index.html">Main</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="datasets.html">Datasets</a>
+                            <ul class="dropdown arrow-top">
+                                <li><a href="dogdataDetail.html">dog barking data</a></li>
+                                <li><a href="catdataDetail.html">cat meowing data</a></li>
+                                <li class="has-children">
+                                    <a href="#">FFT data files</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">DOG</a></li>
+                                        <li><a href="#">CAT</a></li>
+                                        <li><a href="#">code</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://tomat0-0.github.io/my-portfolio2024/">Back to Profolio</a></li>
+                    </ul>
+
+                    <a class="site-menu-toggle js-menu-toggle text-black d-inline-block d-lg-none" href="#"><span
+                            class="icon-menu h3"></span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+
+        <div class="heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1>Cat-Datasets</h1>
+                        <p>To expand the emotional sound classification task, I turned to a larger dataset of cat
+                            vocalizations — about 400 audio files recorded under different conditions. This dataset
+                            helped test the generalizability of my models beyond dog barks.</p>
+
+                        <p>Each audio file is stored in a structured directory and follows a consistent naming
+                            convention:</p>
+
+                        <p>All WAV files in this dataset are labeled with the cat's breed (Maine Coon or European
+                            Shorthair), sex and neuter status, and one of three emotional contexts: <code>brushing,
+                                waiting
+                                for food</code>,or <code>isolation in an unfamiliar environment</code>. This structure
+                            made it easier to explore
+                            how
+                            different cats express emotion through vocalization.</p>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END page-heading -->
+
+        <div class="site-section">
+            <div class="container">
+
+                <div class="half d-md-flex d-block align-items-stretch">
+
+                    <!-- Replacing image block with iframe -->
+                    <div style="width: 100%; height: 400px; overflow: hidden; transform: scale(0.9); transform-origin: top left;">
+                        <iframe
+                                frameborder="0"
+                                height="500"
+                                src="cat_dataset_bar_chart.html"
+                                style="border: none;"
+                                width="100%">
+                        </iframe>
+                    </div>
+
+
+                    <div class="half-content align-self-center" style="flex: 1;">
+                        <h3>What's in the Dataset?</h3>
+                        <p>The dataset includes vocalizations across three emotional contexts and two breeds. And we
+                            also split the datastes into 80% training and 20% testing sets to evaluate model
+                            performance.</p>
+                        <p>
+                            <strong>Listen to a sample:</strong><br>
+                            <audio controls>
+                                <source src="audio/sample_meow.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="half d-md-flex align-items-stretch">
+                    <!-- Block 1 -->
+                    <div class="half-content align-self-start pr-md-5 pl-md-4" style="flex: 1;">
+                        <h3>1. Breed Classification</h3>
+
+                        <p>Before diving straight into emotion recognition, I wanted to first test something more
+                            structured: could machine learning distinguish between breeds based on meows?</p>
+
+                        <p>I was still skeptical about whether FFT-transformed audio could actually provide meaningful
+                            features for modeling. Instead of starting with a more ambiguous target like “emotion,” I
+                            focused on breed — where differences are more physical and stable. If the models couldn't
+                            handle that, they’d probably struggle even more with subjective emotional tones.</p>
+
+                        <p>So I applied the same pipeline used in the dog dataset: <strong>PCA</strong> for
+                            dimensionality reduction followed by <strong>Logistic Regression</strong> and
+                            <strong>LDA</strong>. The results were surprisingly clear — both models achieved accuracy
+                            above <strong>90%</strong>.</p>
+
+                        <p>As you can see from the plot on the right, the two breed are well separated, with only a
+                            small amount of overlap:</p>
+
+                    </div>
+
+                    <!-- Block 2 -->
+                    <div class="d-flex flex-column justify-content-center" style="flex: 1; gap: 10px;">
+                        <img alt="PCA Breed Plot" src="images/pca_cat.png"
+                             style="max-width: 100%; height: 48%; object-fit: contain;">
+                        <img alt="LDA Breed Plot" src="images/lda_cat.png"
+                             style="max-width: 100%; height: 48%; object-fit: contain;">
+                    </div>
+
+                </div>
+
+                <!-- Visual Example: 3DPCA CAT -->
+                <div class="half d-md-flex align-items-stretch mt-5">
+                    <div class="half-content align-self-center pr-md-4" style="flex: 1;">
+                        <iframe frameborder="0" height="500" src="cat3d.html" style="border: none;"
+                                width="100%"></iframe>
+                        <p class="text-center small text-muted">Interactive 3D PCA Plot</p>
+                    </div>
+
+                    <!-- Text Block -->
+                    <div class="half-content align-self-center pl-md-4" style="flex: 1;">
+                        <h3>2. Back to Emotional classification</h3>
+                        The excellent results in cat breed classification boosted my confidence in the overall modeling
+                        approach. With a larger sample size than the dog dataset, I was hopeful that emotion
+                        categorization might also yield stronger performance.</p>
+
+                        <p>Continuing with the linear modeling strategy, the <strong>PCA + logistic regression
+                            (64.4%), </strong> performed
+                            better than <strong>LDA(52.9%)</strong>. In comparison, earlier attempts on the smaller dog
+                            dataset yielded accuracies between 50–60%, suggesting only minor gains.</p>
+
+                        <p>You can try rotating, zooming in and out of the plot on the left.</p>
+
+                    </div>
+                </div>
+
+                <div class="half d-md-flex align-items-stretch mt-5">
+
+
+                    <!-- Right: Explanation -->
+                    <div class="half-content align-self-start pl-md-5 pr-md-4" style="flex: 1;">
+                        <h3>3. Nonlinear Modeling with Random Forest</h3>
+
+                        <p>As mentioned earlier, even with a larger dataset, linear models struggled to accurately
+                            classify emotional states. This led me to consider whether a nonlinear approach might better
+                            capture the complexity in the data — so I turned to a <strong>Random Forest
+                                classifier</strong>.</p>
+
+                        <p>The results were interesting: the overall accuracy remained around <strong>64%</strong>,
+                            close to what we have before. However, the <strong>multidimensional
+                                scaling (MDS)</strong> plot (right) revealed something more
+                            subtle — partial clustering, especially for the <em>isolation</em> class.
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- Left: Random Forest MDS Image -->
+                    <div class="img"
+                         style="background-image: url('images/MDS.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 350px; flex: 1;">
+                    </div>
+
+                </div>
+                <div class="half-content align-self-center">
+                    <p>At first, I was a little disappointed that accuracy didn’t improve more. But a comment from
+                        Prof.Lubberts shifted my perspective. He pointed out that the two categories with
+                        overlapping clusters — grooming and feeding — both involve human interaction, while
+                        isolation represents the cat being alone. That contrast, which reflects a real behavioral
+                        difference, may have been what the model was picking up on. If so, the Random Forest may not
+                        have failed — it may have succeeded at recognizing other thing meaningful.</p>
+                </div>
+                <!-- Partial Dependence Plots Row -->
+                <div class="half d-md-flex align-items-stretch mt-4">
+
+                    <!-- Left: Partial dependence plots -->
+                    <div class="img"
+                         style="background-image: url('images/partial.png'); background-size: contain; background-repeat: no-repeat; background-position: center; min-height: 350px; flex: 1;">
+                    </div>
+
+                    <!-- Right: Text -->
+                    <div class="half-content align-self-start pl-md-5 pr-md-4" style="flex: 1;">
+                        <p>To interpret what the model learned, I examined <strong>partial dependence plots</strong>
+                            of
+                            the most important spectral features. These plots showed <strong>nonlinear
+                                threshold-like
+                                behavior</strong>—for example, the probability of classifying a sound as isolation
+                            dropped sharply past a certain spectral value. These patterns demonstrate that Random
+                            Forests can capture more complex effects than linear models, even though the gain in
+                            overall
+                            accuracy was modest.</p>
+
+                    </div>
+
+                </div>
+                <div class="half d-md-flex align-items-stretch mt-5">
+
+                    <!-- Left: stacked images -->
+                    <div class="d-flex flex-column justify-content-center" style="flex: 1; gap: 10px;">
+                        <img alt="PCA Model Result" src="images/catmodel1.png"
+                             style="width: 100%; height: 48%; object-fit: contain;">
+                        <img alt="LDA Model Result" src="images/catmodel2.png"
+                             style="width: 100%; height: 48%; object-fit: contain;">
+                    </div>
+
+                    <!-- Right: text block -->
+                    <div class="half-content align-self-center pl-md-5 pr-md-4" style="flex: 1;">
+                        <h3>4. Model Performance Summary</h3>
+                        <p>The charts summarize classification accuracy across all models tested for both <strong>cat
+                            breed</strong> and <strong>cat emotion</strong>. Breed classification achieved high accuracy
+                            with both logistic regression and LDA, reaching <strong>94.3%</strong>.</p>
+                        <p>Emotion classification was more challenging. While PCA + LDA achieved the best performance at
+                            <strong>65.5%</strong>, other models such as Random Forest and logistic regression performed
+                            similarly. Raw-spectrum LDA performed worse, highlighting the importance of preprocessing
+                            and feature transformation.</p>
+                        <a class="btn btn-outline-primary"
+                           href="index.html">Back to the main
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/jquery-ui.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.stellar.min.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/aos.js"></script>
+
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>
